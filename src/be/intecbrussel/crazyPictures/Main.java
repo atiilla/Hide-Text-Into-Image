@@ -1,4 +1,5 @@
 package be.intecbrussel.crazyPictures;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -56,6 +57,7 @@ public class Main {
 				System.out.println(e.decodeImage(bi));
 				File outputFile = new File("/home/intec/Desktop/newImageOutPut_encrypted.jpg");
 				ImageIO.write(bi, "jpg", outputFile);
+				
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -65,6 +67,18 @@ public class Main {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		
+		
+		SplitAndMerge s = new SplitAndMerge();
+		s.split("/home/intec/Desktop/newImageOutPut_encrypted.jpg", 2000);
+		
+		
 
 	}
-}
+	
+	
+	
+	}
+	
+
